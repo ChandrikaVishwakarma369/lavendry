@@ -54,7 +54,7 @@ import lipliner4 from "../assets/lipliner4.avif";
 import lipstickMars6 from "../assets/lipstickMars6.jpg";
 import LipstickHya2 from "../assets/LipstickHya2.jpg";
 import powdr1 from "../assets/powdr1.avif";
-import lipstickMaybellene3 from "../assets/lipstickMaybellene3.jpg";
+import lipstickMaybellene3 from "../assets/LipstickMaybellene3.jpg";
 import lipstickMaybellene5 from "../assets/lipstickMaybellene5.jpg";
 import powdr2 from "../assets/powdr2.avif";
 import powdr3 from "../assets/powdr3.avif";
