@@ -14,6 +14,7 @@ import SignIn from "./pages/SignIn.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import CartSidebar from "./components/CartSidebar.jsx";
+import ScrollToTopButton from "./components/ScrollToTopButton.jsx";
 
 const App = () => {
   const [cartOpen, setCartOpen] = useState(false);
@@ -24,7 +25,7 @@ const App = () => {
         <div className="min-h-screen flex flex-col overflow-x-hidden">
 
           <Navbar onCartClick={() => setCartOpen(true)} />
-
+          <ScrollToTopButton/>
           {/* 👇 Only pages go inside main */}
           <main className="flex-grow">
             <Routes>

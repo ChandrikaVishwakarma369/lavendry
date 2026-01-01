@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import { ShopContext } from "../../context/ShopContext";
-
+import { useNavigate } from "react-router-dom";
+import { IoArrowBack } from "react-icons/io5";
 const ProductDetails = () => {
   const { id } = useParams();
   const { all_products, addToCart } = useContext(ShopContext);
   const [addedMessage, setAddedMessage] = useState(false); 
-
   const product = all_products.find((p) => p.id === Number(id));
-
+  const navigate = useNavigate();
   if (!product)
     return <div className="text-center py-20 text-xl">Loading...</div>;
 
@@ -24,6 +24,13 @@ const ProductDetails = () => {
 
   return (
     <div className="bg-[#faf7ff] py-10 px-4 sm:py-16 sm:px-6 relative">
+      {/* 🔙 Mobile Back Button */}
+      <button
+  onClick={() => navigate(-1)}
+  className="md:hidden fixed top-4 left-4 z-50 bg-white shadow-lg p-3 rounded-full"
+>
+  <IoArrowBack size={20} />
+</button>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center">
 
         {/* LEFT — Product Image */}
